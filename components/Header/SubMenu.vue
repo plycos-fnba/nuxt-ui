@@ -1,8 +1,11 @@
 <template>
   <div
+    ref="componentRef"
     class="relative z-auto whitespace-nowrap"
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
+    @focusin="(payload) => handleFocus(payload)"
+    @keypress.space="hovered = true"
   >
     <a
       ref="titleRef"
@@ -38,6 +41,7 @@ defineProps({
 
 provide("parent", "HeaderSubMenu");
 
+const componentRef: Ref<HTMLElement | null> = ref(null);
 const titleRef: Ref<HTMLElement | null> = ref(null);
 const listRef: Ref<HTMLElement | null> = ref(null);
 
@@ -48,6 +52,18 @@ const hovered = ref(false);
 useEventListener("keydown", (e: KeyboardEvent) => {
   if (e.key == "Escape") hovered.value = false;
 });
+
+useDetectOutsideClick(componentRef, () => {
+  hovered.value = false;
+});
+
+function handleFocus(e: FocusEvent) {
+  console.log("focus");
+  if (parent == "HeaderSubMenu") {
+    if (e.relatedTarget == null) hovered.value = false;
+    else hovered.value = true;
+  }
+}
 
 const statusIcon = computed(() => {
   if (parent == "HeaderSubMenu") return hovered.value ? "˃" : "˂";
