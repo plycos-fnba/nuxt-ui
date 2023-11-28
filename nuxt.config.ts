@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    // baseURL: "/lycosp.dev.io/",
+    baseURL: "/nuxt-ui/",
     buildAssetsDir: "assets",
   },
   ssr: false,
