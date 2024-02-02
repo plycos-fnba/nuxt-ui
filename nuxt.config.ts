@@ -1,3 +1,5 @@
+const PORT = 3000;
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
@@ -11,7 +13,7 @@ export default defineNuxtConfig({
   css: ["~/assets/css/fonts.css"],
   devtools: { enabled: true },
   devServer: {
-    port: 3001,
+    port: PORT,
   },
   modules: ["@nuxt/ui", "@vueuse/nuxt"],
   ui: {
@@ -24,7 +26,7 @@ export default defineNuxtConfig({
   vite: {
     server: {
       hmr: {
-        clientPort: 3001,
+        clientPort: PORT,
       },
     },
   },

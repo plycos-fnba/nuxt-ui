@@ -1,3 +1,3 @@
 <template>
-    Welcome to Peter's Webapp
+    Welcome to Peter's Webapp... Hello!
 </template>
