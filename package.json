@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev",
+    "dev": "nuxt dev --dotenv .env.local",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -18,6 +18,8 @@
     "vue-router": "^4.2.5"
   },
   "dependencies": {
-    "@nuxt/ui": "^2.13.0"
+    "@nuxt/ui": "^2.13.0",
+    "@pinia/nuxt": "^0.5.1",
+    "pinia": "^2.1.7"
   }
 }

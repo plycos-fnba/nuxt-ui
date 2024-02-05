@@ -4,7 +4,6 @@
     class="relative z-auto whitespace-nowrap"
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
-    @focusin="(payload) => handleFocus(payload)"
     @keypress.space="hovered = true"
   >
     <a
@@ -56,14 +55,6 @@ useEventListener("keydown", (e: KeyboardEvent) => {
 useDetectOutsideClick(componentRef, () => {
   hovered.value = false;
 });
-
-function handleFocus(e: FocusEvent) {
-  console.log("focus");
-  if (parent == "HeaderSubMenu") {
-    if (e.relatedTarget == null) hovered.value = false;
-    else hovered.value = true;
-  }
-}
 
 const statusIcon = computed(() => {
   if (parent == "HeaderSubMenu") return hovered.value ? "˃" : "˂";

@@ -5,12 +5,12 @@
     <div
       class="mx-auto px-4 grid grid-cols-3 items-center h-[auto] min-h-[60px]"
     >
-      <HeaderLogo />
+      <HeaderLogo :title="'Escrow Webapp'" />
 
       <HeaderRoutes />
 
-      <div class="justify-self-end mr-96">
-        <HeaderRouteItem route="/about">About</HeaderRouteItem>
+      <div class="justify-self-end">
+        <HeaderRouteItem :title="'About'" :route="'/'" />
       </div>
     </div>
   </header>
