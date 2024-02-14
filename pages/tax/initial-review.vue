@@ -1,0 +1,3 @@
+<template>
+  <TaxInitialReviewTable />
+</template>

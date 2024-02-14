@@ -1,7 +1,7 @@
 <template>
   <div
     ref="componentRef"
-    class="relative z-auto whitespace-nowrap"
+    class="relative whitespace-nowrap"
     @mouseenter="hovered = true"
     @mouseleave="hovered = false"
     @keypress.space="hovered = true"
@@ -9,7 +9,7 @@
     <a
       ref="titleRef"
       href="#"
-      class="text-sm/6 font-semibold flex items-center justify-between gap-1.5"
+      class="text-sm/6 text-white font-semibold flex items-center justify-between gap-1.5"
       :class="{ 'text-fnba-green-500': hovered }"
       onclick="return false"
     >

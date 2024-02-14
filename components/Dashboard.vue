@@ -41,7 +41,7 @@ onBeforeMount(() => load());
       <template #header>
         <div class="flex items-center justify-between">
           <span class="font-semibold">{{ card.title }}</span>
-          <UButton label="View All" @click="useNavigate(card.route)" />
+          <UButton color="white" label="View All" @click="useNavigate(card.route)" />
         </div>
       </template>
 

@@ -9,7 +9,7 @@ export default defineNuxtConfig({
 
   ssr: false,
   colorMode: {
-    preference: "system",
+    preference: "light",
   },
 
   css: ["~/assets/css/fonts.css"],
@@ -18,6 +18,10 @@ export default defineNuxtConfig({
 
   devServer: {
     port: PORT,
+  },
+
+  imports: {
+    dirs: ["./composables/**", "./utils/**"],
   },
 
   modules: ["@nuxt/ui", "@vueuse/nuxt", "@pinia/nuxt"],

@@ -7,13 +7,13 @@
       class="flex items-end gap-2 font-semibold text-xl"
     >
       <img src="~/assets/images/logoHeader.png" alt="FNBA Logo" class="w-12" />
-      <span>{{ title }}</span>
+      <span class="text-white">{{ title }}</span>
     </a>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { Route } from "~/models/utils/Route";
+import { RouteEnum } from '~/models/router/RouteEnum';
 
 defineProps({
   title: {
@@ -24,6 +24,6 @@ defineProps({
 });
 
 function navigate() {
-  useNavigate(Route.HOME);
+  useNavigate(RouteEnum.ROOT);
 }
 </script>

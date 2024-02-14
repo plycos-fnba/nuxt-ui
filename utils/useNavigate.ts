@@ -1,5 +1,5 @@
-import type { Route } from "~/models/utils/Route";
+import type { RouteEnum } from "~/models/router/RouteEnum";
 
-export async function useNavigate(url: Route | string) {
+export async function useNavigate(url: RouteEnum | string) {
   await navigateTo(url);
 }
